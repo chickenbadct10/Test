@@ -92,14 +92,14 @@ class NhaCungCapTableSeeder extends Seeder {
                 $xuatXu[$i] = 3;
             }
         }
-        $xuatXu[$nXuatXu] = VnBase::RandomNumber(1, 6);
+        $xuatXu[$nXuatXu] = VnBase::RandomNumber(1, 5);
         $today = new DateTime('2010-01-01 08:00:00');
         for ($i=1, $count=2; $i <= $nXuatXu; $i++) {
             for ($j=0; $j < $xuatXu[$i]; $j++, $count++) {
                 $daiDien   = $uFN->FullName(VnBase::VnMixed);
                 $email     = $uPI->Email($daiDien, "?", "", "?", "Ymd", VnBase::VnLowerCase, VnBase::VnTrimNormal);
                 $tenNCC    = $this->getCompanyName($daiDien, $uFN);
-                $diaChi    = $dsDiaChi[$i-1][$j];
+                $diaChi    = $dsDiaChi[$i][$j];
                 $dienThoai = $uPI->Mobile("", VnBase::VnFalse);
 
                 array_push($list, [

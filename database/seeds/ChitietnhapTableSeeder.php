@@ -21,7 +21,6 @@ class ChitietnhapTableSeeder extends Seeder {
             array_push($list, [
                 'pn_ma'                   => $i,
                 'sp_ma'                   => $i,
-                'm_ma'                    => $i,
                 'ctn_soLuong'             => $i,
                 'ctn_donGia'              => $i
             ]);

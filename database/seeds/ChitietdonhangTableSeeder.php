@@ -22,7 +22,6 @@ class ChitietdonhangTableSeeder extends Seeder {
             array_push($list, [
                 'dh_ma'                   => $faker->numberBetween(1, 15),
                 'sp_ma'                   => $faker->numberBetween(1, 30),
-                'm_ma'                    => $faker->numberBetween(1, 20),
                 'ctdh_soLuong'            => $faker->numberBetween(1, 20),
                 'ctdh_donGia'             => round($faker->randomFloat(99999999, 80000, 6500000), -3),
             ]);

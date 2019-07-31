@@ -32,7 +32,7 @@ class NhanvienTableSeeder extends Seeder {
             'nv_matKhau'   => bcrypt('123456'),
             'nv_hoTen'     => "Chưa phân công",
             'nv_gioiTinh'  => true,
-            'nv_email'     => "unknown@sunshine.com",
+            'nv_email'     => "unknown@gmail.com",
             'nv_ngaySinh'  => $today->format('Y-m-d H:i:s'),
             'nv_diaChi'    => "unknown",
             'nv_dienThoai' => "01234567890",
@@ -49,7 +49,7 @@ class NhanvienTableSeeder extends Seeder {
                 $birthYear= $uPI->BirthYearValue($age);
                 $birthdate= $uPI->Birthdate($birthYear);
                 $username = $uPI->Username($name, "", "", "", VnBase::VnLowerCase, VnBase::VnTrimShorthand, VnBase::VnTrue);
-                $email    = "$username@sunshine.com";
+                $email    = "$username@gmail.com";
                 $password = bcrypt($username."@".$birthYear);
                 $phone    = $uPI->Mobile("", VnBase::VnFalse);
                 $address  = $uPI->Address();
@@ -72,11 +72,11 @@ class NhanvienTableSeeder extends Seeder {
                 if ($i == 0) {
                     DB::table('cusc_nhacungcap')->insert([[
                         'ncc_ma'        => 1,
-                        'ncc_ten'       => "sunshine.com",
+                        'ncc_ten'       => "cusc.vn",
                         'ncc_daiDien'   => $name,
                         'ncc_diaChi'    => "1 Lý Tự Trọng, P. An Cư, Q. Ninh Kiều, TP. Cần Thơ",
-                        'ncc_dienThoai' => "0955667788",
-                        'ncc_email'     => "cham.soc.khach.hang@sunshine.com",
+                        'ncc_dienThoai' => "0706578886",
+                        'ncc_email'     => "dnmkhoi@cusc.ctu.edu.vn",
                         'ncc_taoMoi'    => $today->format('Y-m-d H:i:s'),
                         'ncc_capNhat'   => $today->format('Y-m-d H:i:s'),
                         'xx_ma'         => 1
@@ -92,10 +92,10 @@ class NhanvienTableSeeder extends Seeder {
             'nv_matKhau'   => bcrypt('123456'),
             'nv_hoTen'     => "Quản trị hệ thống",
             'nv_gioiTinh'  => true,
-            'nv_email'     => "admin@nentang.vn",
+            'nv_email'     => "admin@gmail.com",
             'nv_ngaySinh'  => $today->format('Y-m-d H:i:s'),
-            'nv_diaChi'    => "130 Xô Viết Nghệ Tỉnh, Quận Ninh Kiều, TP Cần Thơ",
-            'nv_dienThoai' => "0915659223",
+            'nv_diaChi'    => "Số 1 Lý Tự Trọng, Quận Ninh Kiều, TP Cần Thơ",
+            'nv_dienThoai' => "0706578886",
             'nv_taoMoi'    => $today->format('Y-m-d H:i:s'),
             'nv_capNhat'   => $today->format('Y-m-d H:i:s'),
             'q_ma'         => 2
