@@ -44,14 +44,49 @@ Route::group(['middleware' => 'auth'], function()
     // Dashboard
     Route::get('/admin', 'BackendController@dashboard')->name('backend.dashboard');
 
-    // Chủ đề
-    Route::get('/admin/chude', 'ChuDeController@index')->name('backend.chude.index');
-    Route::get('/admin/chude/create', 'ChuDeController@create')->name('backend.chude.create');
-    Route::post('/admin/chude/store', 'ChuDeController@store')->name('backend.chude.store');
-    Route::get('/admin/chude/edit/{id}', 'ChuDeController@edit')->name('backend.chude.edit');
-    Route::put('/admin/chude/update/{id}', 'ChuDeController@update')->name('backend.chude.update');
-    Route::delete('/admin/chude/delete/{id}', 'ChuDeController@destroy')->name('backend.chude.destroy');
-
+    // Loại
+    Route::get('/admin/loai', 'LoaiController@index')->name('backend.loai.index');
+    Route::get('/admin/loai/create', 'LoaiController@create')->name('backend.loai.create');
+    Route::post('/admin/loai/store', 'LoaiController@store')->name('backend.loai.store');
+    Route::get('/admin/loai/edit/{id}', 'LoaiController@edit')->name('backend.loai.edit');
+    Route::put('/admin/loai/update/{id}', 'LoaiController@update')->name('backend.loai.update');
+    Route::delete('/admin/loai/delete/{id}', 'LoaiController@destroy')->name('backend.loai.destroy');
+    // Thanh toán
+    Route::get('/admin/thanhtoan', 'ThanhToanController@index')->name('backend.thanhtoan.index');
+    Route::get('/admin/thanhtoan/create', 'ThanhToanController@create')->name('backend.thanhtoan.create');
+    Route::post('/admin/thanhtoan/store', 'ThanhToanController@store')->name('backend.thanhtoan.store');
+    Route::get('/admin/thanhtoan/edit/{id}', 'ThanhToanController@edit')->name('backend.thanhtoan.edit');
+    Route::put('/admin/thanhtoan/update/{id}', 'ThanhToanController@update')->name('backend.thanhtoan.update');
+    Route::delete('/admin/thanhtoan/delete/{id}', 'ThanhToanController@destroy')->name('backend.thanhtoan.destroy');
+        // Vận chuyển
+    Route::get('/admin/vanchuyen', 'VanChuyenController@index')->name('backend.vanchuyen.index');
+    Route::get('/admin/vanchuyen/create', 'VanChuyenController@create')->name('backend.vanchuyen.create');
+    Route::post('/admin/vanchuyen/store', 'VanChuyenController@store')->name('backend.vanchuyen.store');
+    Route::get('/admin/vanchuyen/edit/{id}', 'VanChuyenController@edit')->name('backend.vanchuyen.edit');
+    Route::put('/admin/vanchuyen/update/{id}', 'VanChuyenController@update')->name('backend.vanchuyen.update');
+    Route::delete('/admin/vanchuyen/delete/{id}', 'VanChuyenController@destroy')->name('backend.vanchuyen.destroy');
+    // Xuất Xứ
+    Route::get('/admin/xuatxu', 'XuatXuController@index')->name('backend.xuatxu.index');
+    Route::get('/admin/xuatxu/create', 'XuatXuController@create')->name('backend.xuatxu.create');
+    Route::post('/admin/xuatxu/store', 'XuatXuController@store')->name('backend.xuatxu.store');
+    Route::get('/admin/xuatxu/edit/{id}', 'XuatXuController@edit')->name('backend.xuatxu.edit');
+    Route::put('/admin/xuatxu/update/{id}', 'XuatXuController@update')->name('backend.xuatxu.update');
+    Route::delete('/admin/xuatxu/delete/{id}', 'XuatXuController@destroy')->name('backend.xuatxu.destroy');    
+    
+    // Nhà cung cấp
+    Route::get('/admin/nhacungcap', 'NhaCungCapController@index')->name('backend.nhacungcap.index');
+    Route::get('/admin/nhacungcap/create', 'NhaCungCapController@create')->name('backend.nhacungcap.create');
+    Route::post('/admin/nhacungcap/store', 'NhaCungCapController@store')->name('backend.nhacungcap.store');
+    Route::get('/admin/nhacungcap/edit/{id}', 'NhaCungCapController@edit')->name('backend.nhacungcap.edit');
+    Route::put('/admin/nhacungcap/update/{id}', 'NhaCungCapController@update')->name('backend.nhacungcap.update');
+    Route::delete('/admin/nhacungcap/delete/{id}', 'NhaCungCapController@destroy')->name('backend.nhacungcap.destroy');   
+    // Nhà cung cấp
+    Route::get('/admin/quyen', 'QuyenController@index')->name('backend.quyen.index');
+    Route::get('/admin/quyen/create', 'QuyenController@create')->name('backend.quyen.create');
+    Route::post('/admin/quyen/store', 'QuyenController@store')->name('backend.quyen.store');
+    Route::get('/admin/quyen/edit/{id}', 'QuyenController@edit')->name('backend.quyen.edit');
+    Route::put('/admin/quyen/update/{id}', 'QuyenController@update')->name('backend.quyen.update');
+    Route::delete('/admin/quyen/delete/{id}', 'QuyenController@destroy')->name('backend.quyen.destroy'); 
     // Sản phẩm
     Route::get('/admin/sanpham', 'SanPhamController@index')->name('backend.sanpham.index');
     Route::get('/admin/sanpham/create', 'SanPhamController@create')->name('backend.sanpham.create');

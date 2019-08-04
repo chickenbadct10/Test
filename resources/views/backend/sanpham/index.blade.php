@@ -21,7 +21,7 @@ Danh sách các Sản phẩm có trong Hệ thống. Bạn có thể CRUD!
         <tr>
             <th>STT</th>
             <th>Hình</th>
-            <th>Mã sản phẩm</th>
+            <th>Tên sản phẩm</th>
             <th>Giá gốc</th>
             <th>Loại sản phẩm</th>
             <th>Sửa</th>

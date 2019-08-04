@@ -11,7 +11,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 
-    <title>Sunshine | @yield('title')</title>
+    <title>Phong Vũ | @yield('title')</title>
 
     <!-- Các custom style dành riêng cho từng view -->
     @yield('custom-css')

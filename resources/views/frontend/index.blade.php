@@ -3,7 +3,7 @@
 
 {{-- Thay thế nội dung vào Placeholder `title` của view `frontend.layouts.master` --}}
 @section('title')
-Shop Hoa tươi - Sunshine
+Phong Vũ - Computer
 @endsection
 
 {{-- Thay thế nội dung vào Placeholder `custom-css` của view `frontend.layouts.master` --}}
@@ -12,10 +12,6 @@ Shop Hoa tươi - Sunshine
 
 {{-- Thay thế nội dung vào Placeholder `main-content` của view `frontend.layouts.master` --}}
 @section('main-content')
-<div class="container text-center">
-    <h1>{{ __('sunshine.welcome') }}</h1>
-</div>
-
 <!-- Slider -->
 @include('frontend.widgets.homepage-slider')
 <!-- Banner -->

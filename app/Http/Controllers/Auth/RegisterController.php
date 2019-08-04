@@ -87,7 +87,7 @@ class RegisterController extends Controller
         ]);
 
         // Gởi mail thông báo đăng ký thành công
-        Mail::to('hotro.nentangtoituonglai@gmail.com')
+        Mail::to('dnmkhoi@cusc.ctu.edu.vn')
             ->send(new RegisterMailer($nv));
 
         return $nv;

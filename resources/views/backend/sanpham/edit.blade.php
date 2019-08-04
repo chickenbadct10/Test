@@ -68,5 +68,7 @@ Sửa Sản phẩm. Vui lòng nhập thông tin và bấm Lưu.
         <option value="2" {{ old('sp_trangThai', $sp->sp_trangThai) == 2 ? "selected" : "" }}>Khả dụng</option>
     </select>
     <button class="btn btn-primary">Lưu</button>
+    <a type="button" href="{{route('backend.sanpham.index')}}" class="btn btn-danger">Trở về</a>
+
 </form>
 @endsection

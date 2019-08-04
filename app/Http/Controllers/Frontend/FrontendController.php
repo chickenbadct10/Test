@@ -46,15 +46,11 @@ class FrontendController extends Controller
         // Query danh sách Loại
         $danhsachloai = Loai::all();
 
-        // Query danh sách màu
-        $danhsachmau = Mau::all();
-
         // Hiển thị view `frontend.index` với dữ liệu truyền vào
         return view('frontend.index')
             ->with('ds_top3_newest_loaisanpham', $ds_top3_newest_loaisanpham)
             ->with('danhsachsanpham', $danhsachsanpham)
             ->with('danhsachhinhanhlienquan', $danhsachhinhanhlienquan)
-            ->with('danhsachmau', $danhsachmau)
             ->with('danhsachloai', $danhsachloai);
     }
 
@@ -71,7 +67,7 @@ class FrontendController extends Controller
     public function sendMailContactForm(Request $request)
     {
         $input = $request->all();
-        Mail::to('hotro.nentangtoituonglai@gmail.com')->send(new ContactMailer($input));
+        Mail::to('dnmkhoi@cusc.ctu.edu.vn')->send(new ContactMailer($input));
         return $input;
     }
 
@@ -101,13 +97,11 @@ class FrontendController extends Controller
         $danhsachloai = Loai::all();
 
         // Query danh sách màu
-        $danhsachmau = Mau::all();
 
         // Hiển thị view `frontend.index` với dữ liệu truyền vào
         return view('frontend.pages.product')
             ->with('danhsachsanpham', $danhsachsanpham)
             ->with('danhsachhinhanhlienquan', $danhsachhinhanhlienquan)
-            ->with('danhsachmau', $danhsachmau)
             ->with('danhsachloai', $danhsachloai);
     }
 

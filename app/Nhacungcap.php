@@ -16,4 +16,9 @@ class Nhacungcap extends Model {
 
     protected $dates        = ['ncc_taoMoi', 'ncc_capNhat'];
     protected $dateFormat   = 'Y-m-d H:i:s';
+
+    public function xuatxusanpham()
+    {
+        return $this->belongsTo('App\Xuatxu', 'xx_ma', 'xx_ma');
+    }
 }
