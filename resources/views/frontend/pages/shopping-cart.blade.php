@@ -3,7 +3,7 @@
 
 {{-- Thay thế nội dung vào Placeholder `title` của view `frontend.layouts.master` --}}
 @section('title')
-Giỏ hàng Shop Hoa tươi - Sunshine
+Giỏ hàng Phong Vũ - Computer
 @endsection
 
 {{-- Thay thế nội dung vào Placeholder `custom-css` của view `frontend.layouts.master` --}}
@@ -30,7 +30,7 @@ Giỏ hàng Shop Hoa tươi - Sunshine
                     <ul>
                         <!-- Thông báo lỗi kh_email -->
                         <li><span class="error" ng-show="orderForm.kh_email.$error.required">Vui lòng nhập email</span></li>
-                        <li><span class="error" ng-show="!orderForm.kh_email.$error.required && orderForm.kh_email.$error.pattern">Chỉ chấp nhập GMAIL, vui lòng kiểm tra lại</span></li>
+                        <li><span class="error" ng-show="!orderForm.kh_email.$error.required && orderForm.kh_email.$error.pattern">Chỉ chấp nhập gmail, vui lòng kiểm tra lại</span></li>
 
                         <!-- Thông báo lỗi kh_taiKhoan -->
                         <li><span class="error" ng-show="orderForm.kh_taiKhoan.$error.required">Vui lòng nhập tên tài khoản</span></li>
@@ -68,7 +68,11 @@ Giỏ hàng Shop Hoa tươi - Sunshine
                     <label for="kh_email">Email:</label>
                     <input type="email" class="form-control" id="kh_email" name="kh_email" ng-model="kh_email" ng-pattern="/^.+@gmail.com$/" ng-required=true>
                 </div>
-                <div class="form-group">
+                <div class="form-group" >
+                    <label for="nv_ngaySinhDatepicker">Ngày sinh</label>
+                    <input id="nv_ngaySinhDatepicker" type="text" class="form-control">
+                </div>               
+                <div class="form-group" style="display: none;">
                     <label for="kh_ngaySinh">Ngày sinh:</label>
                     <input type="text" class="form-control" id="kh_ngaySinh" name="kh_ngaySinh" ng-model="kh_ngaySinh" ng-required=true>
                 </div>
@@ -106,9 +110,6 @@ Giỏ hàng Shop Hoa tươi - Sunshine
                         <li><span class="error" ng-show="orderForm.dh_nguoiGui.$error.required">Vui lòng nhập Người gửi</span></li>
                         <li><span class="error" ng-show="orderForm.dh_nguoiGui.$error.minlength">Người gửi phải > 6 ký tự</span></li>
                         <li><span class="error" ng-show="orderForm.dh_nguoiGui.$error.maxlength">Người gửi phải <= 100 ký tự</span> </li> <!-- Thông báo lỗi dh_loiChuc -->
-                        <li><span class="error" ng-show="orderForm.dh_loiChuc.$error.required">Vui lòng nhập Lời chúc</span></li>
-                        <li><span class="error" ng-show="orderForm.dh_loiChuc.$error.minlength">Lời chúc phải > 6 ký tự</span></li>
-                        <li><span class="error" ng-show="orderForm.dh_loiChuc.$error.maxlength">Lời chúc phải <= 500 ký tự</span> </li> <!-- Thông báo lỗi vc_ma -->
                         <li><span class="error" ng-show="orderForm.vc_ma.$error.required">Vui lòng chọn Hình thức vận chuyển</span></li>
 
                         <!-- Thông báo lỗi tt_ma -->
@@ -116,7 +117,11 @@ Giỏ hàng Shop Hoa tươi - Sunshine
                         </li>
                 </div>
                 <div class="form-group">
-                    <label for="dh_thoiGianNhanHang">Thời gian nhận hàng:</label>
+                        <label for="dh_thoiGianNhanHangDatePicker">Ngày nhận hàng:</label>
+                        <input type="text" class="form-control" id="dh_thoiGianNhanHangDatePicker" name="dh_thoiGianNhanHangDatePicker">
+                    </div>                
+                <div class="form-group">
+                    <label for="dh_thoiGianNhanHang" style="display:none;">Ngày nhận hàng:</label>
                     <input type="text" class="form-control" id="dh_thoiGianNhanHang" name="dh_thoiGianNhanHang" ng-model="dh_thoiGianNhanHang" ng-required=true>
                 </div>
                 <div class="form-group">
@@ -134,10 +139,6 @@ Giỏ hàng Shop Hoa tươi - Sunshine
                 <div class="form-group">
                     <label for="dh_nguoiGui">Người gửi:</label>
                     <input type="text" class="form-control" id="dh_nguoiGui" name="dh_nguoiGui" ng-model="dh_nguoiGui" ng-minlength="6" ng-maxlength="100" ng-required=true>
-                </div>
-                <div class="form-group">
-                    <label for="dh_loiChuc">Lời chúc:</label>
-                    <textarea class="form-control" id="dh_loiChuc" name="dh_loiChuc" ng-model="dh_loiChuc" ng-minlength="6" ng-maxlength="500" ng-required=true></textarea>
                 </div>
                 <div class="form-group">
                     <label for="vc_ma">Hình thức vận chuyển:</label>
@@ -164,7 +165,7 @@ Giỏ hàng Shop Hoa tươi - Sunshine
         -->
         <div class="alert alert-success" ng-show="orderForm.$valid">
             Thông tin hợp lệ, vui lòng bấm nút <b>"Thanh toán"</b> để hoàn tất ĐƠN HÀNG<br />
-            Chúng tôi sẽ gởi mail đển quý khách. Xin chân thành cám ơn Quý Khách hàng đã tin tưởng sản phẩm của chúng tôi.
+            Chúng tôi sẽ gửi email đến quý khách. Xin chân thành cám ơn Quý Khách hàng đã tin tưởng sản phẩm của chúng tôi.
         </div>
         <!-- Nút submit form -->
         <button type="submit" class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer mb-4" ng-disabled="orderForm.$invalid && ngCart.getTotalItems() === 0">
@@ -204,7 +205,6 @@ Giỏ hàng Shop Hoa tươi - Sunshine
                     "dh_diaChi": $scope.orderForm.dh_diaChi.$viewValue,
                     "dh_dienThoai": $scope.orderForm.dh_dienThoai.$viewValue,
                     "dh_nguoiGui": $scope.orderForm.dh_nguoiGui.$viewValue,
-                    "dh_loiChuc": $scope.orderForm.dh_loiChuc.$viewValue,
                     "vc_ma": $scope.orderForm.vc_ma.$viewValue,
                     "tt_ma": $scope.orderForm.tt_ma.$viewValue,
                 };
@@ -217,7 +217,7 @@ Giỏ hàng Shop Hoa tươi - Sunshine
                     "giohang": dataCart,
                     "_token": "{{ csrf_token() }}",
                 };
-
+                debugger;
                 // sử dụng service $http của AngularJS để gởi request POST đến route `frontend.order`
                 $http({
                     url: "{{ route('frontend.order') }}",
@@ -241,6 +241,60 @@ Giỏ hàng Shop Hoa tươi - Sunshine
                 });
             }
         };
+    });
+</script>
+
+<script type="text/javascript" src="{{ asset('vendor/momentjs/moment.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('vendor/daterangepicker/daterangepicker.min.js') }}"></script>
+<script>
+    $(document).ready(function() {
+        debugger;
+        $('#nv_ngaySinhDatepicker,#dh_thoiGianNhanHangDatePicker').daterangepicker({
+            "singleDatePicker": true,
+            "showDropdowns": true,
+            "showWeekNumbers": true,
+            "showISOWeekNumbers": true,
+            "timePicker": true,
+            "timePicker24Hour": true,
+            "locale": {
+                "format": "DD/MM/YYYY",
+                "separator": " - ",
+                "applyLabel": "Đồng ý",
+                "cancelLabel": "Hủy",
+                "fromLabel": "Từ",
+                "toLabel": "Đến",
+                "customRangeLabel": "Tùy chọn",
+                "weekLabel": "T",
+                "daysOfWeek": [
+                    "CN",
+                    "T2",
+                    "T3",
+                    "T4",
+                    "T5",
+                    "T6",
+                    "T7"
+                ],
+                "monthNames": [
+                    "Tháng 1",
+                    "Tháng 2",
+                    "Tháng 3",
+                    "Tháng 4",
+                    "Tháng 5",
+                    "Tháng 6",
+                    "Tháng 7",
+                    "Tháng 8",
+                    "Tháng 9",
+                    "Tháng 10",
+                    "Tháng 11",
+                    "Tháng 12",
+                ],
+                "firstDay": 1
+            },
+        }, function(start, end, label) {
+            // Gán giá trị cho Ngày để gởi dữ liệu về Backend
+            $('#nv_ngaySinh,#dh_thoiGianNhanHangDatePicker').val(start.format('YYYY-MM-DD HH:mm:ss'));
+        });
+        // callback function
     });
 </script>
 @endsection

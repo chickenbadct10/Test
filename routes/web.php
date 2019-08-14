@@ -87,7 +87,7 @@ Route::group(['middleware' => 'auth'], function()
     Route::get('/admin/quyen/edit/{id}', 'QuyenController@edit')->name('backend.quyen.edit');
     Route::put('/admin/quyen/update/{id}', 'QuyenController@update')->name('backend.quyen.update');
     Route::delete('/admin/quyen/delete/{id}', 'QuyenController@destroy')->name('backend.quyen.destroy'); 
-    // Sản phẩm
+    // Sản phẩm Laptop
     Route::get('/admin/sanpham', 'SanPhamController@index')->name('backend.sanpham.index');
     Route::get('/admin/sanpham/create', 'SanPhamController@create')->name('backend.sanpham.create');
     Route::post('/admin/sanpham/store', 'SanPhamController@store')->name('backend.sanpham.store');
@@ -97,6 +97,16 @@ Route::group(['middleware' => 'auth'], function()
     Route::get('/admin/sanpham/print', 'SanPhamController@print')->name('backend.sanpham.print');
     Route::get('/admin/sanpham/pdf', 'SanPhamController@pdf')->name('backend.sanpham.pdf');
 
+    // Máy bàn
+    Route::get('/admin/mayban', 'MayBanController@index')->name('backend.mayban.index');
+    Route::get('/admin/mayban/create', 'MayBanController@create')->name('backend.mayban.create');
+    Route::post('/admin/mayban/store', 'MayBanController@store')->name('backend.mayban.store');
+    Route::get('/admin/mayban/edit/{id}', 'MayBanController@edit')->name('backend.mayban.edit');
+    Route::put('/admin/mayban/update/{id}', 'MayBanController@update')->name('backend.mayban.update');
+    Route::delete('/admin/mayban/delete/{id}', 'MayBanController@destroy')->name('backend.mayban.destroy');
+    Route::get('/admin/mayban/print', 'MayBanController@print')->name('backend.mayban.print');
+    Route::get('/admin/mayban/pdf', 'MayBanController@pdf')->name('backend.mayban.pdf');
+        
     // Tạo route Báo cáo Đơn hàng 
     Route::get('/admin/baocao/donhang', 'Backend\BaoCaoController@donhang')->name('backend.baocao.donhang'); 
     Route::get('/admin/baocao/donhang/data', 'Backend\BaoCaoController@donhangData')->name('backend.baocao.donhang.data');
@@ -148,6 +158,9 @@ Route::post('/lien-he/goi-loi-nhan', 'Frontend\FrontendController@sendMailContac
 
 Route::get('/san-pham', 'Frontend\FrontendController@product')->name('frontend.product');
 Route::get('/san-pham/{id}', 'Frontend\FrontendController@productDetail')->name('frontend.productDetail');
+
+Route::get('/may-ban', 'Frontend\FrontendController@productMB')->name('frontend.mayban');
+Route::get('/may-ban/{id}', 'Frontend\FrontendController@productDetailMB')->name('frontend.maybanDetail');
 
 Route::get('/gio-hang', 'Frontend\FrontendController@cart')->name('frontend.cart');
 

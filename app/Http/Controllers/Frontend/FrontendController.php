@@ -17,6 +17,7 @@ use App\Thanhtoan;
 use App\Chitietdonhang;
 use Carbon\Carbon;
 use App\Mail\OrderMailer;
+use App\MayBan;
 
 class FrontendController extends Controller
 {
@@ -36,8 +37,16 @@ class FrontendController extends Controller
             ->get();
 
         // Query tìm danh sách sản phẩm
-        $danhsachsanpham = $this->searchSanPham($request);
+        $danhsachsanpham = Sanpham::paginate(8);
+        if($request->ajax() || 'NULL'){
+            $sanpham = Sanpham::all();
+          }
 
+                  // Query tìm danh sách sản phẩm
+        $danhsachsanphammaybo = MayBan::paginate(8);
+        if($request->ajax() || 'NULL'){
+            $sanpham = MayBan::all();
+          }
         // Query Lấy các hình ảnh liên quan của các Sản phẩm đã được lọc
         $danhsachhinhanhlienquan = DB::table('cusc_hinhanh')
             ->whereIn('sp_ma', $danhsachsanpham->pluck('sp_ma')->toArray())
@@ -50,6 +59,7 @@ class FrontendController extends Controller
         return view('frontend.index')
             ->with('ds_top3_newest_loaisanpham', $ds_top3_newest_loaisanpham)
             ->with('danhsachsanpham', $danhsachsanpham)
+            ->with('danhsachsanphammaybo', $danhsachsanphammaybo)
             ->with('danhsachhinhanhlienquan', $danhsachhinhanhlienquan)
             ->with('danhsachloai', $danhsachloai);
     }
@@ -86,8 +96,10 @@ class FrontendController extends Controller
     public function product(Request $request)
     {
         // Query tìm danh sách sản phẩm
-        $danhsachsanpham = $this->searchSanPham($request);
-
+        $danhsachsanpham = Sanpham::paginate(8);
+        if($request->ajax() || 'NULL'){
+            $sanpham = Sanpham::all();
+          }
         // Query Lấy các hình ảnh liên quan của các Sản phẩm đã được lọc
         $danhsachhinhanhlienquan = DB::table('cusc_hinhanh')
             ->whereIn('sp_ma', $danhsachsanpham->pluck('sp_ma')->toArray())
@@ -104,7 +116,24 @@ class FrontendController extends Controller
             ->with('danhsachhinhanhlienquan', $danhsachhinhanhlienquan)
             ->with('danhsachloai', $danhsachloai);
     }
+    public function productMB(Request $request)
+    {
+        // Query tìm danh sách sản phẩm
+        $danhsachsanpham = MayBan::paginate(8);
+        if($request->ajax() || 'NULL'){
+            $sanpham = MayBan::all();
+          }
 
+        // Query danh sách Loại
+        $danhsachloai = Loai::all();
+
+        // Query danh sách màu
+
+        // Hiển thị view `frontend.index` với dữ liệu truyền vào
+        return view('frontend.pages.mayban')
+            ->with('danhsachsanpham', $danhsachsanpham)
+            ->with('danhsachloai', $danhsachloai);
+    }
     /**
      * Action hiển thị chi tiết Sản phẩm
      */
@@ -120,16 +149,23 @@ class FrontendController extends Controller
         // Query danh sách Loại
         $danhsachloai = Loai::all();
 
-        // Query danh sách màu
-        $danhsachmau = Mau::all();
-
         return view('frontend.pages.product-detail')
             ->with('sp', $sanpham)
             ->with('danhsachhinhanhlienquan', $danhsachhinhanhlienquan)
-            ->with('danhsachmau', $danhsachmau)
             ->with('danhsachloai', $danhsachloai);
     }
+    public function productDetailMB(Request $request, $id)
+    {
+        $sanpham = MayBan::find($id);
 
+
+        // Query danh sách Loại
+        $danhsachloai = Loai::all();
+
+        return view('frontend.pages.maybandetail')
+            ->with('sp', $sanpham)
+            ->with('danhsachloai', $danhsachloai);
+    }
     /**
      * Action hiển thị giỏ hàng
      */

@@ -54,10 +54,10 @@
         <table border="0" align="center">
             <tr>
                 <td class="companyInfo">
-                    Công ty Nền tảng<br />
-                    http://sunshine.com/<br />
-                    (0292)3.888.999 # 01.222.888.999<br />
-                    <img src="{{ asset('img/logo-nentang.jpg') }}" class="companyImg" />
+                    Công ty TNHH Phong Vũ - Computer<br />
+                    http://cusc.vn/<br />
+                    (070).657.8886<br />
+                    <img src="{{ asset('img/icon.png') }}" class="companyImg" />
                 </td>
             </tr>
         </table>

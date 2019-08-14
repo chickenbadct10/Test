@@ -3,31 +3,31 @@
         <div class="row">
             <div class="col-sm-6 col-lg-3 p-b-50">
                 <h4 class="stext-301 cl0 p-b-30">
-                    Categories
+                    Sản phẩm
                 </h4>
 
                 <ul>
                     <li class="p-b-10">
                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Women
+                            Linh kiện máy tính
+                        </a>
+                    </li>
+
+                    <li class="p-b-10">
+                    <a href="{{route('frontend.product')}}" class="stext-107 cl7 hov-cl1 trans-04">
+                            Laptop
                         </a>
                     </li>
 
                     <li class="p-b-10">
                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Men
+                            Máy bàn
                         </a>
                     </li>
 
                     <li class="p-b-10">
                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Shoes
-                        </a>
-                    </li>
-
-                    <li class="p-b-10">
-                        <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Watches
+                            Phụ kiện gaming
                         </a>
                     </li>
                 </ul>
@@ -35,25 +35,19 @@
 
             <div class="col-sm-6 col-lg-3 p-b-50">
                 <h4 class="stext-301 cl0 p-b-30">
-                    Help
+                    Trợ giúp
                 </h4>
 
                 <ul>
                     <li class="p-b-10">
                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Track Order
+                            Liên hệ
                         </a>
                     </li>
 
                     <li class="p-b-10">
                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Returns
-                        </a>
-                    </li>
-
-                    <li class="p-b-10">
-                        <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Shipping
+                            Giới thiệu
                         </a>
                     </li>
 
@@ -67,15 +61,15 @@
 
             <div class="col-sm-6 col-lg-3 p-b-50">
                 <h4 class="stext-301 cl0 p-b-30">
-                    GET IN TOUCH
+                    Địa chỉ
                 </h4>
 
                 <p class="stext-107 cl7 size-201">
-                    Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+                    Số 1 Lý Tự Trọng, Phường An Phú, Quận Ninh Kiều Thành Phố Cần Thơ
                 </p>
 
                 <div class="p-t-27">
-                    <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+                    <a href="https://www.facebook.com/KunGenius10" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
                         <i class="fa fa-facebook"></i>
                     </a>
 
@@ -91,7 +85,7 @@
 
             <div class="col-sm-6 col-lg-3 p-b-50">
                 <h4 class="stext-301 cl0 p-b-30">
-                    Newsletter
+                    Email
                 </h4>
 
                 <form>
@@ -102,7 +96,7 @@
 
                     <div class="p-t-18">
                         <button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-                            Subscribe
+                            Đăng ký
                         </button>
                     </div>
                 </form>
@@ -110,33 +104,12 @@
         </div>
 
         <div class="p-t-40">
-            <div class="flex-c-m flex-w p-b-18">
-                <a href="#" class="m-all-1">
-                    <img src="{{ asset('themes/cozastore/images/icons/icon-pay-01.png') }}" alt="ICON-PAY">
-                </a>
-
-                <a href="#" class="m-all-1">
-                    <img src="{{ asset('themes/cozastore/images/icons/icon-pay-02.png') }}" alt="ICON-PAY">
-                </a>
-
-                <a href="#" class="m-all-1">
-                    <img src="{{ asset('themes/cozastore/images/icons/icon-pay-03.png') }}" alt="ICON-PAY">
-                </a>
-
-                <a href="#" class="m-all-1">
-                    <img src="{{ asset('themes/cozastore/images/icons/icon-pay-04.png') }}" alt="ICON-PAY">
-                </a>
-
-                <a href="#" class="m-all-1">
-                    <img src="{{ asset('themes/cozastore/images/icons/icon-pay-05.png') }}" alt="ICON-PAY">
-                </a>
-            </div>
 
             <p class="stext-107 cl6 txt-center">
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy;<script>
                     document.write(new Date().getFullYear());
-                </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://cusc.vn" target="_blank">Trung tâm công nghệ phần mềm Đại học Cần Thơ</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
             </p>

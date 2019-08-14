@@ -5,28 +5,19 @@
         <div class="top-bar">
             <div class="content-topbar flex-sb-m h-full container">
                 <div class="left-top-bar">
-                    Free shipping for standard order over $100
+                   Miễn phí ship trong nội ô Thành Phố Cần Thơ
                 </div>
 
                 <div class="right-top-bar flex-w h-full">
-                    <a href="#" class="flex-c-m trans-04 p-lr-25">
-                        Help & FAQs
+                    <a href="{{route('frontend.contact')}}" class="flex-c-m trans-04 p-lr-25">
+                        Liên hệ
                     </a>
-
-                    <a href="#" class="flex-c-m trans-04 p-lr-25">
-                        My Account
-                    </a>
-
                     <a href="{{ route('app.setLocale', ['locale' => 'en']) }}" class="flex-c-m trans-04 p-lr-25">
                         EN
                     </a>
 
                     <a href="{{ route('app.setLocale', ['locale' => 'vi']) }}" class="flex-c-m trans-04 p-lr-25">
                         VI
-                    </a>
-
-                    <a href="#" class="flex-c-m trans-04 p-lr-25">
-                        USD
                     </a>
                 </div>
             </div>
@@ -36,8 +27,8 @@
             <nav class="limiter-menu-desktop container">
 
                 <!-- Logo desktop -->
-                <a href="" class="logo">
-                    <img src="{{ asset('themes/cozastore/images/icons/logo-01.png') }}" alt="IMG-LOGO">
+            <a href="{{route('frontend.home')}}" class="logo">
+                    <img src="{{ asset('img/icon.png') }}" alt="IMG-LOGO">
                 </a>
 
                 <!-- Menu desktop -->
@@ -89,7 +80,7 @@
     <div class="wrap-header-mobile">
         <!-- Logo moblie -->
         <div class="logo-mobile">
-            <a href="index.html"><img src="{{ asset('themes/cozastore/images/icons/logo-01.png') }}" alt="IMG-LOGO"></a>
+            <a href="index.html"><img <img src="{{ asset('img/icon.png') }}" alt="IMG-LOGO"></a>
         </div>
 
         <!-- Icon header -->
@@ -121,20 +112,15 @@
         <ul class="topbar-mobile">
             <li>
                 <div class="left-top-bar">
-                    Free shipping for standard order over $100
+                    Miễn phí ship trong nội ô Thành Phố Cần Thơ
                 </div>
             </li>
 
             <li>
                 <div class="right-top-bar flex-w h-full">
-                    <a href="#" class="flex-c-m p-lr-10 trans-04">
-                        Help & FAQs
+                <a href="{{route('frontend.contact')}}" class="flex-c-m p-lr-10 trans-04">
+                        Liên hệ
                     </a>
-
-                    <a href="#" class="flex-c-m p-lr-10 trans-04">
-                        My Account
-                    </a>
-
                     <a href="#" class="flex-c-m p-lr-10 trans-04">
                         EN
                     </a>
@@ -148,35 +134,25 @@
 
         <ul class="main-menu-m">
             <li>
-                <a href="index.html">Home</a>
-                <ul class="sub-menu-m">
-                    <li><a href="index.html">Homepage 1</a></li>
-                    <li><a href="home-02.html">Homepage 2</a></li>
-                    <li><a href="home-03.html">Homepage 3</a></li>
-                </ul>
+            <a href="{{route('frontend.home')}}">Trang chủ</a>
                 <span class="arrow-main-menu-m">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </span>
             </li>
 
             <li>
-                <a href="#">Shop</a>
+                <a href="{{route('frontend.product')}}">Sản Phẩm</a>
+            </li>
+            <li>
+                <a href="{{route('frontend.contact')}}">Liên hệ</a>
             </li>
 
             <li>
-                <a href="#" class="label1 rs1" data-label1="hot">Features</a>
+                <a href="{{route('frontend.about')}}">Giới thiệu</a>
             </li>
 
             <li>
-                <a href="#">Blog</a>
-            </li>
-
-            <li>
-                <a href="#">About</a>
-            </li>
-
-            <li>
-                <a href="#">Contact</a>
+                <a href="{{route('backend.dashboard')}}">Quản trị</a>
             </li>
         </ul>
     </div>

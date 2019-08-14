@@ -3,7 +3,7 @@
 
 {{-- Thay thế nội dung vào Placeholder `title` của view `frontend.layouts.master` --}}
 @section('title')
-Giới thiệu Shop Hoa tươi - Sunshine
+Giới thiệu - Phong Vũ Computer
 @endsection
 
 {{-- Thay thế nội dung vào Placeholder `custom-css` của view `frontend.layouts.master` --}}
@@ -15,7 +15,7 @@ Giới thiệu Shop Hoa tươi - Sunshine
 <!-- Title page -->
 <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('{{ asset('themes/cozastore/images/bg-01.jpg') }}');">
     <h2 class="ltext-105 cl0 txt-center">
-        About
+        Giới thiệu
     </h2>
 </section>
 

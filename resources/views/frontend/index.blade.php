@@ -18,6 +18,8 @@ Phong Vũ - Computer
 @include('frontend.widgets.homepage-banner', [$data = $ds_top3_newest_loaisanpham])
 <!-- Product -->
 @include('frontend.widgets.product-list', [$data = $danhsachsanpham])
+
+@include('frontend.widgets.product-list-desktop', [$data = $danhsachsanphammaybo])
 @endsection
 
 {{-- Thay thế nội dung vào Placeholder `custom-scripts` của view `frontend.layouts.master` --}}

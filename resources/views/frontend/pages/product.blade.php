@@ -3,7 +3,7 @@
 
 {{-- Thay thế nội dung vào Placeholder `title` của view `frontend.layouts.master` --}}
 @section('title')
-Danh sách sản phẩm Shop Hoa tươi - Sunshine
+Danh sách laptop - Phong Vũ Computer
 @endsection
 
 {{-- Thay thế nội dung vào Placeholder `custom-css` của view `frontend.layouts.master` --}}
@@ -14,7 +14,6 @@ Danh sách sản phẩm Shop Hoa tươi - Sunshine
 @section('main-content')
 
 @include('frontend.widgets.product-list', [$data = $danhsachsanpham])
-
 @endsection
 
 {{-- Thay thế nội dung vào Placeholder `custom-scripts` của view `frontend.layouts.master` --}}

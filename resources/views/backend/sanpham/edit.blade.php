@@ -55,20 +55,13 @@ Sửa Sản phẩm. Vui lòng nhập thông tin và bấm Lưu.
         <label for="sp_danhGia">Đánh giá</label>
         <input type="text" class="form-control" id="sp_danhGia" name="sp_danhGia" value="{{ old('sp_danhGia', $sp->sp_danhGia) }}">
     </div>
-    <div class="form-group">
-        <label for="sp_taoMoi">Ngày tạo mới</label>
-        <input type="text" class="form-control" id="sp_taoMoi" name="sp_taoMoi" value="{{ old('sp_taoMoi', $sp->sp_taoMoi) }}" data-mask-datetime>
-    </div>
-    <div class="form-group">
-        <label for="sp_capNhat">Ngày cập nhật</label>
-        <input type="text" class="form-control" id="sp_capNhat" name="sp_capNhat" value="{{ old('sp_capNhat', $sp->sp_capNhat) }}" data-mask-datetime>
-    </div>
     <select name="sp_trangThai" class="form-control">
         <option value="1" {{ old('sp_trangThai', $sp->sp_trangThai) == 1 ? "selected" : "" }}>Khóa</option>
         <option value="2" {{ old('sp_trangThai', $sp->sp_trangThai) == 2 ? "selected" : "" }}>Khả dụng</option>
     </select>
+    <div class="form-group">
     <button class="btn btn-primary">Lưu</button>
     <a type="button" href="{{route('backend.sanpham.index')}}" class="btn btn-danger">Trở về</a>
-
+    </div>
 </form>
 @endsection

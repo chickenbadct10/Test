@@ -26,10 +26,10 @@ Biểu mẫu Phiếu in danh sách sản phẩm
         <table border="0" align="center" cellspacing="0">
             <tr>
                 <td class="companyInfo" align="center">
-                    Công ty TNHH Sunshine<br />
-                    http://sunshine.com/<br />
-                    (0292)3.888.999 # 01.222.888.999<br />
-                    <img src="{{ asset('img/logo-nentang.jpg') }}" class="logo" />
+                    Công ty TNHH Phong Vũ - Computer<br />
+                    http://cusc.cb/<br />
+                    070-657-8886<br />
+                    <img src="{{ asset('img/icon.png') }}" class="logo" />
                 </td>
             </tr>
         </table>

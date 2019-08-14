@@ -10,7 +10,7 @@
             <!-- Menu Loại - Start -->
             <li class="nav-item">
                 <a href="#loaiSubMenu" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle {{ (strpos(Route::currentRouteName(), 'backend.loai') === 0) ? 'active' : '' }}">
-                    <span data-feather="package"></span> Loại laptop
+                    <span data-feather="package"></span> Thương hiệu sản phẩm
                 </a>
                 <ul class="{{ (strpos(Route::currentRouteName(), 'backend.loai') === 0) ? 'collapse show' : 'collapse' }}" id="loaiSubMenu">
                     <li class="nav-item">
@@ -154,7 +154,48 @@
                     </li>
                 </ul>
             </li>
-            <!-- Menu Quyền- End -->                                            
+            <!-- Menu Quyền- End -->    
+            <!-- Menu Máy bàn - Start -->
+            <li class="nav-item">
+                    <a href="#maybanSubMenu" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle {{ (strpos(Route::currentRouteName(), 'backend.mayban') === 0) ? 'active' : '' }}">
+                        <span data-feather="package"></span> Máy Bàn
+                    </a>
+                    <ul class="{{ (strpos(Route::currentRouteName(), 'backend.mayban') === 0) ? 'collapse show' : 'collapse' }}" id="maybanSubMenu">
+                        <li class="nav-item">
+                            <a class="nav-link {{ (strpos(Route::currentRouteName(), 'backend.mayban.index') === 0) ? 'active' : '' }}" href="{{ route('backend.mayban.index') }}/">
+                                <span data-feather="list"></span>
+                                Danh sách
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ (strpos(Route::currentRouteName(), 'backend.mayban.create') === 0) ? 'active' : '' }}" href="{{ route('backend.mayban.create') }}">
+                                <span data-feather="plus"></span>
+                                Thêm mới
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Menu Quyền- End -->                         <!-- Menu Quyền - Start -->
+            <li class="nav-item">
+                <a href="#nquyenSubMenu" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle {{ (strpos(Route::currentRouteName(), 'backend.quyen') === 0) ? 'active' : '' }}">
+                    <span data-feather="package"></span> Quyền
+                </a>
+                <ul class="{{ (strpos(Route::currentRouteName(), 'backend.quyen') === 0) ? 'collapse show' : 'collapse' }}" id="nquyenSubMenu">
+                    <li class="nav-item">
+                        <a class="nav-link {{ (strpos(Route::currentRouteName(), 'backend.quyen.index') === 0) ? 'active' : '' }}" href="{{ route('backend.quyen.index') }}/">
+                            <span data-feather="list"></span>
+                            Danh sách
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ (strpos(Route::currentRouteName(), 'backend.quyen.create') === 0) ? 'active' : '' }}" href="{{ route('backend.quyen.create') }}">
+                            <span data-feather="plus"></span>
+                            Thêm mới
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- Menu Quyền- End -->                                         
             <!-- Menu Báo cáo - Start -->
             <li class="nav-item">
                 <a href="#baocaoSubMenu" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle {{ (strpos(Route::currentRouteName(), 'backend.baocao') === 0) ? 'active' : '' }}">

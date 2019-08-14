@@ -3,7 +3,7 @@
 
 {{-- Thay thế nội dung vào Placeholder `title` của view `frontend.layouts.master` --}}
 @section('title')
-Liên hệ Shop Hoa tươi - Sunshine
+Liên hệ  - Phong Vũ Computer
 @endsection
 
 {{-- Thay thế nội dung vào Placeholder `custom-css` của view `frontend.layouts.master` --}}
@@ -26,7 +26,7 @@ Liên hệ Shop Hoa tươi - Sunshine
             <div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
                 <form name="contactForm" ng-submit="submitContactForm()" novalidate>
                     <h4 class="mtext-105 cl2 txt-center p-b-30">
-                        Gởi lời nhắn cho công ty Sunshine
+                        Gởi lời nhắn cho Phong Vũ Computer
                     </h4>
 
                     <!-- Div Thông báo lỗi 
@@ -46,7 +46,7 @@ Liên hệ Shop Hoa tươi - Sunshine
                                         Sử dụng tiền chỉ lệnh ng-show="contactForm.$valid"
                                         -->
                                         <div class="alert alert-success" ng-show="contactForm.$valid">
-                                            Thông tin hợp lệ, vui lòng bấm nút <b>"Gởi lời nhắn"</b> để gởi mail đến Quản trị trang web<br />
+                                            Thông tin hợp lệ, vui lòng bấm nút <b>"Gửi lời nhắn"</b> để gửi mail đến Quản trị trang web<br />
                                             Xin chân thành cám ơn các đóng góp, ý kiến, thắc mắc của Quý Khách hàng.
                                         </div>
 
@@ -64,7 +64,7 @@ Liên hệ Shop Hoa tươi - Sunshine
 
                                         <!-- Nút submit form -->
                                         <button type="submit" class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer" ng-disabled="contactForm.$invalid">
-                                            Gởi lời nhắn
+                                            Gửi lời nhắn
                                         </button>
                 </form>
             </div>
@@ -81,7 +81,7 @@ Liên hệ Shop Hoa tươi - Sunshine
                         </span>
 
                         <p class="stext-115 cl6 size-213 p-t-18">
-                            130 Xô Viết Nghệ Tỉnh, Phường An Hội, Quận Ninh Kiều, TP Cần Thơ
+                            Số 1 Lý Tự Trọng, Phường An Phú, Quận Ninh Kiều, TP Cần Thơ
                         </p>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ Liên hệ Shop Hoa tươi - Sunshine
                         </span>
 
                         <p class="stext-115 cl1 size-213 p-t-18">
-                            0915-659-223
+                            070-657-8886
                         </p>
                     </div>
                 </div>
@@ -113,7 +113,7 @@ Liên hệ Shop Hoa tươi - Sunshine
                         </span>
 
                         <p class="stext-115 cl1 size-213 p-t-18">
-                            nentangtoituonglai@gmail.com
+                            dnmkhoi@cusc.ctu.edu.vn
                         </p>
                     </div>
                 </div>
@@ -126,8 +126,7 @@ Liên hệ Shop Hoa tươi - Sunshine
                 <h2>Địa chỉ liên hệ</h2>
             </div>
             <div class="col-md-12">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.723612696626!2d105.78061631534743!3d10.03965089282403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a062a768a8090b%3A0x4756d383949cafbb!2zMTMwIFjDtCBWaeG6v3QgTmdo4buHIFTEqW5oLCBBbiBI4buZaSwgTmluaCBLaeG7gXUsIEPhuqduIFRoxqEsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1544352305719" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.789447381705!2d105.77749831411124!3d10.034226275198808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0881fa2f86433%3A0xee52427c850bbc0d!2zMSBMw70gVOG7sSBUcuG7jW5nLCBUw6JuIEFuLCBOaW5oIEtp4buBdSwgQ-G6p24gVGjGoSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1565008999438!5m2!1svi!2s" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>            </div>
         </div>
     </div>
 </section>
@@ -157,11 +156,11 @@ Liên hệ Shop Hoa tươi - Sunshine
                     data: JSON.stringify(dataInputContactForm)
                 }).then(function successCallback(response) {
                     // Gởi mail thành công, thông báo cho khách hàng biết
-                    swal('Gởi mail thành công!', 'Chúng tôi sẽ trả lời Quý khách trong thời gian sớm nhất. Xin cám ơn!', 'success');
+                    swal('Gửi mail thành công!', 'Chúng tôi sẽ trả lời Quý khách trong thời gian sớm nhất. Xin cám ơn!', 'success');
 
                 }, function errorCallback(response) {
                     // Gởi mail không thành công, thông báo lỗi cho khách hàng biết
-                    swal('Có lỗi trong quá trình gởi mail!', 'Vui lòng thử lại sau vài phút.', 'error');
+                    swal('Có lỗi trong quá trình gửi mail!', 'Vui lòng thử lại sau vài phút.', 'error');
                     console.log(response);
                 });
             }

@@ -9,6 +9,7 @@ use App\Loai;
 use Session;
 use Storage;
 use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Support\Carbon;
 
 class SanPhamController extends Controller
 {
@@ -24,7 +25,7 @@ class SanPhamController extends Controller
 
         // Sử dụng Eloquennt Model phân trang
         // Mỗi trang có 5 mẫu tin
-        $ds_sanpham = SanPham::paginate(5); // SELECT * FROM sanpham LIMIT 0,5
+        $ds_sanpham = SanPham::paginate(6); // SELECT * FROM sanpham LIMIT 0,5
 
         // Đường dẫn đến view được quy định như sau: <FolderName>.<ViewName>
         // Mặc định đường dẫn gốc của method view() là thư mục `resources/views`
@@ -65,9 +66,10 @@ class SanPhamController extends Controller
         $sp->sp_giaGoc = $request->sp_giaGoc;
         $sp->sp_giaBan = $request->sp_giaBan;
         $sp->sp_thongTin = $request->sp_thongTin;
+        $sp->sp_hinh = $request->sp_hinh;
         $sp->sp_danhGia = $request->sp_danhGia;
-        $sp->sp_taoMoi = $request->sp_taoMoi;
-        $sp->sp_capNhat = $request->sp_capNhat;
+        $sp->sp_taoMoi = Carbon::now();
+        $sp->sp_capNhat = Carbon::now();
         $sp->sp_trangThai = $request->sp_trangThai;
         $sp->l_ma = $request->l_ma;
 
@@ -129,8 +131,7 @@ class SanPhamController extends Controller
         $sp->sp_giaBan = $request->sp_giaBan;
         $sp->sp_thongTin = $request->sp_thongTin;
         $sp->sp_danhGia = $request->sp_danhGia;
-        $sp->sp_taoMoi = $request->sp_taoMoi;
-        $sp->sp_capNhat = $request->sp_capNhat;
+        $sp->sp_capNhat = Carbon::now();
         $sp->sp_trangThai = $request->sp_trangThai;
         $sp->l_ma = $request->l_ma;
 
